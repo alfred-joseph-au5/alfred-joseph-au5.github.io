@@ -19,7 +19,12 @@
             });
         };
     </script>
-    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js">
+        FB.getLoginStatus(function(response) {
+            console.log(response);
+            statusChangeCallback(response);
+        });
+    </script>
 
     <h1>HELLO FACEBOOK!</h1>
 </body>
